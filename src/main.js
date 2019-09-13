@@ -8,41 +8,14 @@ import VueLazyLoad from 'vue-lazyload'
 
 //按需导入elementUI我们项目中用到的组件
 //按需导入我们的element-ui
-import {
-    Button,
-    Pagination,
-    Input,
-    InputNumber,
-    Switch,
-    Form,
-    FormItem,
-    Radio,
-    RadioGroup,
-    MessageBox,
-    Message,
-    Carousel,
-    CarouselItem,
-    Row,
-    Col
-} from 'element-ui'
 
-Vue.use(Button) //自动导入element-ui/lib/theme-chalk/button.css
-Vue.use(Pagination)
-Vue.use(InputNumber)
-Vue.use(Form)
-Vue.use(FormItem)
-Vue.use(Radio)
-Vue.use(RadioGroup)
-Vue.use(Input)
-Vue.use(Switch)
-Vue.use(Carousel)
-Vue.use(CarouselItem)
-Vue.use(Row)
-Vue.use(Col)
 
-Vue.prototype.$message = Message
-Vue.prototype.$confirm = MessageBox.confirm
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+// Vue.prototype.$message = Message
+// Vue.prototype.$confirm = MessageBox.confirm
+Vue.use(ElementUI);
 //全局注册我们项目中用到的element的组件
 
 //在Vue的原型上挂在一个叫做$axios的属性，所有的Vue对象都可以使用

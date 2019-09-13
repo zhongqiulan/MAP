@@ -14,6 +14,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
+                test: /.scss$/,
+                loaders: ["style", "css", "sass"]
+            },
+            {
                 test: /\.(ttf|eot|woff|svg|jpg|png|gif)$/,
                 use: [
                     {
@@ -33,7 +37,7 @@ module.exports = {
     plugins: [
         //将来以template为模版，生成一个index.html并且发布到webpack-dev-server开启的node服务器上面去
         new HtmlWebpackPlugin({
-            template: './template.html'
+            template: './index.html'
         }),
         new webpack.ProvidePlugin({
             $: "jquery",

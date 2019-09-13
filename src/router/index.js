@@ -22,6 +22,7 @@ import vipCenter from '../components/vipCenter/vipCenter'
 import myOrders from '../components/vipCenter/myOrders'
 import orderInfo from '../components/vipCenter/orderInfo'
  */
+const table = () => import("../components/table/table")
 const goodslist = () => import("../components/goods/goodslist")
 const shopcart = () => import("../components/shopcart/shopcart")
 const goodsinfo = () => import("../components/goods/goodsinfo")
@@ -37,6 +38,7 @@ const router = new VueRouter({
     routes: [
         { path: '/', redirect: '/goodslist' },
         { path: '/goodslist', component: goodslist },
+        { path: '/table', component: table },
         { path: '/shopcart', component: shopcart },
         { path: '/goodsinfo/:goodsId', component: goodsinfo },
         { path:'/login',component:login},

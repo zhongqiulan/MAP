@@ -1,6 +1,13 @@
 {
     "presets": [
-        "env"
+        {
+            "presets": [
+                "es2015"
+            ],
+            "plugins": [
+                "transform-vue-jsx"
+            ]
+        }
     ],
     "plugins": [
         [
@@ -17,6 +24,8 @@
                 "styleLibraryName": "theme-chalk"
             }
         ],
-        ["syntax-dynamic-import"]
+        [
+            "syntax-dynamic-import"
+        ]
     ]
 }

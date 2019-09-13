@@ -80,7 +80,7 @@ module.exports = {
 
         //将来以template为模版，生成一个index.html并且发布到webpack-dev-server开启的node服务器上面去
         new HtmlWebpackPlugin({
-            template: './template.html',
+            template: './index.html',
             minify:{
                 removeComments: true,//压缩注释
                 minifyJS: true,//压缩js
