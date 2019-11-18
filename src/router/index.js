@@ -10,19 +10,8 @@ axios.defaults.withCredentials = true
 Vue.prototype.$axios = axios
 
 //路由对象相关
-/**
-import goodslist from '../components/goods/goodslist'
-import shopcart from '../components/shopcart/shopcart'
-import goodsinfo from '../components/goods/goodsinfo'
-import order from '../components/order/order'
-import login from '../components/account/login'
-import payOrder from '../components/pay/payOrder'
-import pcPaySuccess from '../components/pay/pcPaySuccess'
-import vipCenter from '../components/vipCenter/vipCenter'
-import myOrders from '../components/vipCenter/myOrders'
-import orderInfo from '../components/vipCenter/orderInfo'
- */
-const table = () => import("../components/table/table")
+const table = () => import("../components/template/table")
+const popTemplate = () => import("../components/template/pop")
 const goodslist = () => import("../components/goods/goodslist")
 const shopcart = () => import("../components/shopcart/shopcart")
 const goodsinfo = () => import("../components/goods/goodsinfo")
@@ -33,12 +22,14 @@ const pcPaySuccess = () => import("../components/pay/pcPaySuccess")
 const vipCenter = () => import("../components/vipCenter/vipCenter")
 const myOrders = () => import("../components/vipCenter/myOrders")
 const orderInfo = () => import("../components/vipCenter/orderInfo")
+const helpCenter = () => import("../components/helpCenter/helpCenter")
 
 const router = new VueRouter({
     routes: [
         { path: '/', redirect: '/goodslist' },
         { path: '/goodslist', component: goodslist },
         { path: '/table', component: table },
+        { path: '/popTemplate', component: popTemplate },
         { path: '/shopcart', component: shopcart },
         { path: '/goodsinfo/:goodsId', component: goodsinfo },
         { path:'/login',component:login},
@@ -49,6 +40,7 @@ const router = new VueRouter({
         { path: '/pcPaySuccess', component: pcPaySuccess,meta: { requiresAuth: true } },
         { path: '/vipCenter', component: vipCenter,meta: { requiresAuth: true } },
         { path: '/myOrders', component: myOrders,meta: { requiresAuth: true } },
+        { path: '/helpCenter', component: helpCenter},
         //params
         // { name:'orderInfo', path: '/orderInfo/:orderId/:goodsId',component:orderInfo,meta: { requiresAuth: true } },
         //query
